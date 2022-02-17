@@ -1,0 +1,16 @@
+#first run this
+
+import re
+file = open('file.txt','w')
+file.write('Hello This is my new Python file. Hope ,U Understand Python Very well till this topic. if u want to contact me call 920-536-3186)')
+file.close()
+print('Data Written to this file')
+
+
+#second run
+
+file = open ('file.txt','r')
+phone = file.read()
+pattern = re.compile(r'(\d{3})-(\d{3})-(\d{4})')
+contact = re.search(pattern,phone)
+print(contact.group())
